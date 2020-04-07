@@ -1,0 +1,96 @@
+{
+  "displayName": "PublicMemberProfiles",
+  "maxPageSize": 100,
+  "allowedOperations": [
+    "count",
+    "get",
+    "find"
+  ],
+  "id": "Users/PublicMemberProfiles",
+  "isDeleted": false,
+  "ownerAppId": "14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9",
+  "displayNamespace": "Users",
+  "fields": {
+    "privacyStatus": {
+      "displayName": "Privacy Status",
+      "sortable": false,
+      "queryOperators": [
+        "eq",
+        "hasSome",
+        "contains",
+        "urlized"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 4
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": false,
+      "queryOperators": [
+        "eq",
+        "hasSome",
+        "contains",
+        "urlized"
+      ],
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 0
+    },
+    "joinedAt": {
+      "displayName": "Joined At",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 5
+    },
+    "slug": {
+      "displayName": "Slug",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "hasSome",
+        "contains",
+        "urlized"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 3
+    },
+    "imageUrl": {
+      "displayName": "Picture",
+      "sortable": false,
+      "queryOperators": [],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "image",
+      "index": 1
+    },
+    "nickname": {
+      "displayName": "Nickname",
+      "sortable": true,
+      "queryOperators": [
+        "eq",
+        "hasSome",
+        "contains",
+        "urlized"
+      ],
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 2
+    }
+  },
+  "displayField": "nickname",
+  "storage": "driver",
+  "defaultSort": {
+    "fieldName": "nickname",
+    "direction": "asc"
+  },
+  "namespace": "Users"
+}

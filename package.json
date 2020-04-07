@@ -1,0 +1,9 @@
+{
+  "name": "corona-degens",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "corvid-cli": "^0.2.7",
+    "corvid-types": "^0.1.95"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "displayName": "contactForm",
+  "permissions": {
+    "insert": "anyone",
+    "update": "admin",
+    "remove": "admin",
+    "read": "admin"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "contactForm",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "submissionTime": {
+      "displayName": "Submission Time",
+      "sortable": true,
+      "pluginId": "14ce1214-b278-a7e4-1373-00cebd1bef7c",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "datetime",
+      "index": 1
+    },
+    "email": {
+      "displayName": "Email",
+      "sortable": true,
+      "pluginId": "14ce1214-b278-a7e4-1373-00cebd1bef7c",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 3
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 6
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 7
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 8
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 9
+    },
+    "lastName": {
+      "displayName": "Name",
+      "sortable": true,
+      "pluginId": "14ce1214-b278-a7e4-1373-00cebd1bef7c",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 2
+    },
+    "message": {
+      "displayName": "Message",
+      "sortable": true,
+      "pluginId": "14ce1214-b278-a7e4-1373-00cebd1bef7c",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": true,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "phone": {
+      "displayName": "Phone",
+      "sortable": true,
+      "pluginId": "14ce1214-b278-a7e4-1373-00cebd1bef7c",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 4
+    }
+  },
+  "displayField": "submissionTime",
+  "storage": "docstore",
+  "namespace": null
+}
