@@ -2,6 +2,7 @@
 import wixData from "wix-data";
 import wixLocation from "wix-location";
 import wixUsers from "wix-users";
+import { getResultsFromScreenshot } from "backend/getResultsFromScreenshot";
 
 $w.onReady(async function () {
   const getBuyin = () => Number($w("#buyin").value);
@@ -48,6 +49,17 @@ $w.onReady(async function () {
       console.log(e);
       $w("#errorIndicator").expand();
     }
+  });
+
+  $w("#button2").onClick(async () => {
+    const uploadButton = $w("#uploadButton1");
+    if (uploadButton.value.length === 0) {
+      console.log("no uploaded screenshot");
+      return;
+    }
+
+    const file = await uploadButton.startUpload();
+    console.log(await getResultsFromScreenshot(file.url));
   });
 
   function getGamePlayerResults() {

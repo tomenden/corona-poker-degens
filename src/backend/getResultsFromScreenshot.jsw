@@ -1,0 +1,24 @@
+import { getJSON } from "wix-fetch";
+import { getSecret } from "wix-secrets-backend";
+const OCR_KEY_NAME = "OCR_API_KEY";
+const OCR_API_ENDPOINT = "https://api.ocr.space/parse/imageurl";
+import { get } from "lodash";
+
+// `https://api.ocr.space/parse/imageurl?isTable=true&apikey=096ef650f888957&url=https://static.wixstatic.com/media/85a3c2_e12a6991cce94dcab575367c5ecb3a37~mv2.png%27).then`
+export async function getResultsFromScreenshot(imageUrl) {
+  const url = getFullUrlFromWixUrl(imageUrl);
+
+  const apikey = await getSecret(OCR_KEY_NAME);
+  try {
+    const response = await getJSON(
+      `${OCR_API_ENDPOINT}?isTable=true&apikey=${apikey}&url=${url}`
+    );
+    return get(response, "ParsedResults[0].ParsedText");
+  } catch (e) {
+    return e;
+  }
+}
+
+function getFullUrlFromWixUrl(wixUrl) {
+  return `https://static.wixstatic.com/media/${wixUrl.split("/")[3]}`;
+}
