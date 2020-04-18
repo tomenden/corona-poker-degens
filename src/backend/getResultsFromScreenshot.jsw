@@ -1,5 +1,6 @@
 import { getJSON } from "wix-fetch";
 import { getSecret } from "wix-secrets-backend";
+import wixData from "wix-data";
 const OCR_KEY_NAME = "OCR_API_KEY";
 const OCR_API_ENDPOINT = "https://api.ocr.space/parse/imageurl";
 import { get } from "lodash";
@@ -13,7 +14,17 @@ export async function getResultsFromScreenshot(imageUrl) {
     const response = await getJSON(
       `${OCR_API_ENDPOINT}?isTable=true&apikey=${apikey}&url=${url}`
     );
-    return get(response, "ParsedResults[0].ParsedText");
+    const parsedText = get(response, "ParsedResults[0].ParsedText");
+    const rows = parsedText.trim().split("\n");
+    const playerPerLine = rows.slice(
+      rows.findIndex((text) => text.includes("Results")) + 1
+    );
+    const playerList = (await wixData.query("players").find()).items;
+    return playerPerLine.map((text) =>
+      playerList.find(({ username }) =>
+        text.replace(/\s|_/g, "").includes(username.replace(/\s|_/g, ""))
+      )._id
+    );
   } catch (e) {
     return e;
   }

@@ -60,7 +60,14 @@ $w.onReady(async function () {
     }
 
     const file = await uploadButton.startUpload();
-    console.log(await getResultsFromScreenshot(file.url));
+    const results = await getResultsFromScreenshot(file.url)
+    checkboxGroup.value = results
+    updatePayoutText()
+    updatePayoutVisibility()
+    updateValidDropdownOptions()
+    $w('#dropdown1').value = results[0]
+    $w('#dropdown2').value = results[1]
+    $w('#dropdown3').value = results[2]
   });
 
   function getGamePlayerResults() {

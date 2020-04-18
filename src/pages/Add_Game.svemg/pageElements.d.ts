@@ -6,7 +6,6 @@ type PageElementsMap = {
   "#dataset1": $w.dataset;
   "#buyin": $w.TextInput;
   "#group1": $w.Box;
-  "#button2": $w.Button;
   "#successIndicator": $w.Text;
   "#errorIndicator": $w.Text;
   "#text16": $w.Text;
@@ -15,8 +14,9 @@ type PageElementsMap = {
   "#dropdown3": $w.Dropdown;
   "#dropdown4": $w.Dropdown;
   "#text18": $w.Text;
-  "#uploadButton1": $w.UploadButton;
   "#button1": $w.Button;
+  "#uploadButton1": $w.UploadButton;
+  "#button2": $w.Button;
   "#header1": $w.Header;
   "#footer1": $w.Footer;
   "#container1": $w.HiddenCollapsedElement;
