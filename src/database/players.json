@@ -75,6 +75,15 @@
       "type": "number",
       "index": 6
     },
+    "member": {
+      "displayName": "member",
+      "sortable": true,
+      "referencedCollection": "Members/PrivateMembersData",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 8
+    },
     "title": {
       "displayName": "Title",
       "sortable": true,
