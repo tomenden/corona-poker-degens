@@ -27,6 +27,14 @@
       "type": "text",
       "index": 5
     },
+    "username": {
+      "displayName": "username",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 7
+    },
     "_id": {
       "displayName": "ID",
       "sortable": true,
@@ -76,7 +84,7 @@
       "index": 0
     }
   },
-  "displayField": "title",
+  "displayField": "username",
   "storage": "docstore",
   "namespace": null
 }

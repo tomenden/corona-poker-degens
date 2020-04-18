@@ -1,5 +1,11 @@
 {
   "displayName": "PublicMemberProfiles",
+  "permissions": {
+    "insert": "admin",
+    "update": "admin",
+    "remove": "admin",
+    "read": "anyone"
+  },
   "maxPageSize": 100,
   "allowedOperations": [
     "count",

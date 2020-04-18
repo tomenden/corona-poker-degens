@@ -1,5 +1,11 @@
 {
   "displayName": "PrivateMembersData",
+  "permissions": {
+    "insert": "admin",
+    "update": "admin",
+    "remove": "admin",
+    "read": "siteMemberAuthor"
+  },
   "allowedOperations": [
     "count",
     "get",
