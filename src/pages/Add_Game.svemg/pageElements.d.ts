@@ -16,6 +16,7 @@ type PageElementsMap = {
   "#text18": $w.Text;
   "#button1": $w.Button;
   "#uploadButton1": $w.UploadButton;
+  "#button2": $w.Button;
   "#header1": $w.Header;
   "#footer1": $w.Footer;
   "#container1": $w.HiddenCollapsedElement;

@@ -1,0 +1,36 @@
+import { getJSON } from "wix-fetch";
+import { getSecret } from "wix-secrets-backend";
+import wixData from "wix-data";
+const OCR_KEY_NAME = "OCR_API_KEY";
+const OCR_API_ENDPOINT = "https://api.ocr.space/parse/imageurl";
+import { get } from "lodash";
+import stringSimilarity from 'string-similarity'
+
+// `https://api.ocr.space/parse/imageurl?isTable=true&apikey=096ef650f888957&url=https://static.wixstatic.com/media/85a3c2_e12a6991cce94dcab575367c5ecb3a37~mv2.png%27).then`
+export async function getResultsFromScreenshot(imageUrl) {
+  const url = getFullUrlFromWixUrl(imageUrl);
+
+  const apikey = await getSecret(OCR_KEY_NAME);
+  try {
+    const response = await getJSON(
+      `${OCR_API_ENDPOINT}?isTable=true&apikey=${apikey}&url=${url}`
+    );
+    const parsedText = get(response, "ParsedResults[0].ParsedText");
+    const rows = parsedText.trim().split("\n");
+    const playerPerLine = rows.slice(
+      rows.findIndex((text) => text.includes("Results")) + 1
+    );
+    const playerList = (await wixData.query("players").find()).items;
+    const usernames = playerList.map(p => p.username);
+    return playerPerLine.map((text) => {
+      const bestMatchingUsername = stringSimilarity.findBestMatch(text, usernames)
+      return playerList.find(p => p.username === bestMatchingUsername.bestMatch.target)._id
+    });
+  } catch (e) {
+    return e;
+  }
+}
+
+function getFullUrlFromWixUrl(wixUrl) {
+  return `https://static.wixstatic.com/media/${wixUrl.split("/")[3]}`;
+}

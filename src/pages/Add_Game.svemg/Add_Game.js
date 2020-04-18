@@ -2,6 +2,7 @@
 import wixData from "wix-data";
 import wixLocation from "wix-location";
 import wixUsers from "wix-users";
+import { getResultsFromScreenshot } from "backend/getResultsFromScreenshot";
 
 $w.onReady(async function () {
   const getBuyin = () => Number($w("#buyin").value);
@@ -28,7 +29,6 @@ $w.onReady(async function () {
     value: p._id,
   }));
   checkboxGroup.onChange(() => {
-    text.text = `${checkboxGroup.value.length} Players`;
     updatePayoutText();
     updatePayoutVisibility();
     updateValidDropdownOptions();
@@ -49,6 +49,24 @@ $w.onReady(async function () {
       console.log(e);
       $w("#errorIndicator").expand();
     }
+  });
+
+  $w("#button2").onClick(async () => {
+    const uploadButton = $w("#uploadButton1");
+    if (uploadButton.value.length === 0) {
+      console.log("no uploaded screenshot");
+      return;
+    }
+
+    const file = await uploadButton.startUpload();
+    const results = await getResultsFromScreenshot(file.url)
+    checkboxGroup.value = results
+    updatePayoutText()
+    updatePayoutVisibility()
+    updateValidDropdownOptions()
+    $w('#dropdown1').value = results[0]
+    $w('#dropdown2').value = results[1]
+    $w('#dropdown3').value = results[2]
   });
 
   function getGamePlayerResults() {
@@ -118,7 +136,7 @@ $w.onReady(async function () {
       $w("#text17").text = "";
     } else {
       const [first = 0, second = 0, third = 0, fourth = 0] = calcPayout(checkboxGroup.value.length, getBuyin());
-
+      text.text = `${checkboxGroup.value.length} Players`;
       $w("#text17").text = `
 		  Payout:
 		  First: ${first}
