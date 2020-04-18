@@ -29,7 +29,6 @@ $w.onReady(async function () {
     value: p._id,
   }));
   checkboxGroup.onChange(() => {
-    text.text = `${checkboxGroup.value.length} Players`;
     updatePayoutText();
     updatePayoutVisibility();
     updateValidDropdownOptions();
@@ -137,7 +136,7 @@ $w.onReady(async function () {
       $w("#text17").text = "";
     } else {
       const [first = 0, second = 0, third = 0, fourth = 0] = calcPayout(checkboxGroup.value.length, getBuyin());
-
+      text.text = `${checkboxGroup.value.length} Players`;
       $w("#text17").text = `
 		  Payout:
 		  First: ${first}
