@@ -13,6 +13,7 @@ type PageElementsMap = {
   "#dropdown1": $w.Dropdown;
   "#dropdown2": $w.Dropdown;
   "#dropdown3": $w.Dropdown;
+  "#dropdown4": $w.Dropdown;
   "#text18": $w.Text;
   "#uploadButton1": $w.UploadButton;
   "#button1": $w.Button;
