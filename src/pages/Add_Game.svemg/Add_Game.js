@@ -15,7 +15,8 @@ $w.onReady(async function () {
   const firstDropdown = $w("#dropdown1");
   const secondDropdown = $w("#dropdown2");
   const thirdDropdown = $w("#dropdown3");
-  const payoutInputs = [firstDropdown, secondDropdown, thirdDropdown];
+  const fourthDropDown = $w("#dropdown4");
+  const payoutInputs = [firstDropdown, secondDropdown, thirdDropdown, fourthDropDown];
   payoutInputs.forEach((dropDown) => {
     dropDown.onChange(updateValidDropdownOptions);
   });
@@ -52,18 +53,15 @@ $w.onReady(async function () {
 
   function getGamePlayerResults() {
     const buyin = getBuyin();
-    const {
-      first: firstAmount,
-      second: secondAmount,
-      third: thirdAmount,
-    } = calcPayout(checkboxGroup.value.length, buyin);
-    const [winner, secondPlace = "", thirdPlace = ""] = payoutInputs.map(
-      (dd) => dd.value
-    );
+    const [first = 0, second = 0, third = 0, fourth = 0] = calcPayout(checkboxGroup.value.length, buyin);
+    const [winner, secondPlace = "", thirdPlace = "", fourthPlace = ""] = payoutInputs.map(
+      dd => dd.value
+    )
     const payoutResults = {
-      [winner]: firstAmount,
-      [secondPlace]: secondAmount,
-      [thirdPlace]: thirdAmount,
+      [winner]: first,
+      [secondPlace]: second,
+      [thirdPlace]: third,
+      [fourthPlace]: fourth
     };
     const players = checkboxGroup.value;
     return players.reduce((results, pId) => {
@@ -104,11 +102,6 @@ $w.onReady(async function () {
     // return wixData.bulkUpdate("players", playerDataToUpdate)
   }
 
-  function getNumPlacesPaid() {
-    const numPlayers = checkboxGroup.value.length;
-    return numPlayers < 4 ? 1 : numPlayers < 8 ? 2 : 3;
-  }
-
   function updatePayoutVisibility() {
     const numPlaces = getNumPlacesPaid();
     payoutInputs.forEach((dropdown, i) => {
@@ -124,16 +117,14 @@ $w.onReady(async function () {
     if (checkboxGroup.value.length === 0) {
       $w("#text17").text = "";
     } else {
-      const {
-        first: firstPayout = 0,
-        second: secondPayout = 0,
-        third: thirdPayout = 0,
-      } = calcPayout(checkboxGroup.value.length, getBuyin());
+      const [first = 0, second = 0, third = 0, fourth = 0] = calcPayout(checkboxGroup.value.length, getBuyin());
+
       $w("#text17").text = `
 		  Payout:
-		  First: ${firstPayout}
-		  Second: ${secondPayout}
-		  Third = ${thirdPayout}
+		  First: ${first}
+		  Second: ${second}
+		  Third = ${third}
+		  Fourth = ${fourth}
 		  `;
     }
   }
@@ -153,30 +144,26 @@ $w.onReady(async function () {
     });
   }
 
+  const PAYOUT_TABLE = [
+    {numPlayers: 3, payouts: [1]},
+    {numPlayers: 7, payouts: [0.7, 0.3]},
+    {numPlayers: 13, payouts: [0.5, 0.3, 0.2]},
+    {numPlayers: 20, payouts: [0.4, 0.25, 0.2, 0.15]} //we will need to add more if we get more players
+  ]
+
+  function getNumPlacesPaid() {
+    const n = checkboxGroup.value.length;
+    const {payouts} = PAYOUT_TABLE.find(({numPlayers}) => n <= numPlayers) || PAYOUT_TABLE[3]
+    return payouts.length
+  }
+
   function calcPayout(n, buyin = 50) {
     const totalMoney = n * buyin;
-    firstDropdown.required = true;
-    if (n < 4) {
-      //winner takes all
-      secondDropdown.required = false;
-      thirdDropdown.required = false;
-      return { first: totalMoney - buyin };
-    } else if (n < 8) {
-      // 70-30
-      secondDropdown.required = true;
-      return {
-        first: Math.round(totalMoney * 0.7) - buyin,
-        second: Math.round(totalMoney * 0.3) - buyin,
-      };
-    } else {
-      // n>= 8 --- 50-30-20
-      secondDropdown.required = true;
-      thirdDropdown.required = true;
-      return {
-        first: Math.round(totalMoney * 0.5) - buyin,
-        second: Math.round(totalMoney * 0.3) - buyin,
-        third: Math.round(totalMoney * 0.2) - buyin,
-      };
-    }
+    const payoutStrategy = PAYOUT_TABLE.find(({numPlayers}) => n <= numPlayers)
+    const {payouts} = payoutStrategy
+    payoutInputs.forEach((input, index) => {
+      input.required = !!payouts[index] //required if there's a payout for this index
+    })
+    return payouts.map(factor => Math.round((totalMoney * factor)) - buyin)
   }
 });
