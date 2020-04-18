@@ -24,7 +24,7 @@ $w.onReady(async function () {
     input.collapse();
   });
   checkboxGroup.options = playerBase.map((p) => ({
-    label: p.name,
+    label: `${p.name} (${p.username})`,
     value: p._id,
   }));
   checkboxGroup.onChange(() => {
