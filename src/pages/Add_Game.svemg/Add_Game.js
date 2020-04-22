@@ -2,6 +2,7 @@
 import wixData from "wix-data";
 import wixLocation from "wix-location";
 import wixUsers from "wix-users";
+import {uniq, find} from "lodash";
 import { getResultsFromScreenshot } from "backend/getResultsFromScreenshot";
 
 $w.onReady(async function () {
@@ -33,7 +34,7 @@ $w.onReady(async function () {
     updatePayoutVisibility();
     updateValidDropdownOptions();
   });
-
+  bindPlayerSearch()
   $w("#buyin").onChange(() => updatePayoutText());
 
   $w("#button1").onClick(async () => {
@@ -68,6 +69,42 @@ $w.onReady(async function () {
     $w('#dropdown2').value = results[1]
     $w('#dropdown3').value = results[2]
   });
+
+  function bindPlayerSearch(){
+    const playerSearch = $w("#playerSearch");
+    const searchResults = $w("#searchResults");
+    let CBGValue, CBGOptions, isCBGHidden
+    searchResults.onChange(event => {
+      const value = event.target.value
+      const upatedValue = uniq(CBGValue.concat(value)).filter(playerId => {
+        return !find(searchResults.options, {value: playerId}) || !value.includes(playerId)
+      })
+      checkboxGroup.value = CBGValue = upatedValue
+    })
+    playerSearch.onChange(event => {
+      const value = (event.target.value || '').toLowerCase()
+      if (!value) {
+        if (isCBGHidden) {
+          searchResults.hide()
+          checkboxGroup.show()
+          isCBGHidden = false
+        }
+        return
+      } else {
+        if (!isCBGHidden) {
+            checkboxGroup.hide()
+            searchResults.show()
+            isCBGHidden = true
+        }
+        if (!CBGOptions) {
+          CBGValue = checkboxGroup.value
+          CBGOptions = checkboxGroup.options
+        }
+        searchResults.options = CBGOptions.filter(({label}) => label.toLowerCase().includes(value))
+        searchResults.value = CBGValue
+      }
+    })
+  }
 
   function getGamePlayerResults() {
     const buyin = getBuyin();
