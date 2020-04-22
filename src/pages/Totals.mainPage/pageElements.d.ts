@@ -12,5 +12,5 @@ type PageElementsMap = {
   "#accountNavBar1": $w.AccountNavBar;
   "#horizontalMenu1": $w.Menu;
   "#profile1": $w.IFrame;
-  "#verticalMenu1": $w.VerticalMenu;
+  "#verticalMenu1": $w.Menu;
 }

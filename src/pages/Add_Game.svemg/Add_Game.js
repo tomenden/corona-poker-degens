@@ -64,9 +64,10 @@ $w.onReady(async function () {
     updatePayoutText()
     updatePayoutVisibility()
     updateValidDropdownOptions()
-    $w('#dropdown1').value = results[0]
-    $w('#dropdown2').value = results[1]
-    $w('#dropdown3').value = results[2]
+    const numOfPlacesPayed = getNumPlacesPaid()
+    for (let i = 0; i < numOfPlacesPayed; i++) {
+      $w(`#dropdown${i+1}`).value = results[i]
+    }
   });
 
   function getGamePlayerResults() {
