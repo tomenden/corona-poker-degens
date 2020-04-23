@@ -1,4 +1,54 @@
 {
-  "content": "eyJkYXRhIjp7Ik1FTUJFUlNfTE9HSU5fTUVOVSI6eyJhcHBJZCI6NjY4MCwiaWQiOiJNRU1CRVJTX0xPR0lOX01FTlUiLCJtZXRhRGF0YSI6eyJpc0hpZGRlbiI6ZmFsc2UsImlzUHJlc2V0IjpmYWxzZSwic2NoZW1hVmVyc2lvbiI6IjEuMCJ9LCJuYW1lIjoiTG9naW4gTWVudSIsInR5cGUiOiJDdXN0b21NZW51In0sImRhdGFJdGVtLWs4Ynd3N25kIjp7ImlkIjoiZGF0YUl0ZW0tazhid3c3bmQiLCJpc1Zpc2libGUiOnRydWUsImlzVmlzaWJsZU1vYmlsZSI6dHJ1ZSwibGFiZWwiOiJNeSBBY2NvdW50IiwibGluayI6IiNkYXRhSXRlbS1rOGJ3dzduZDEiLCJtZXRhRGF0YSI6eyJpc0hpZGRlbiI6ZmFsc2UsImlzUHJlc2V0IjpmYWxzZSwic2NoZW1hVmVyc2lvbiI6IjEuMCJ9LCJ0eXBlIjoiQmFzaWNNZW51SXRlbSJ9LCJkYXRhSXRlbS1rOGJ3dzduZDEiOnsiaWQiOiJkYXRhSXRlbS1rOGJ3dzduZDEiLCJpbm5lclJvdXRlIjoibXktYWNjb3VudCIsIm1ldGFEYXRhIjp7ImlzSGlkZGVuIjpmYWxzZSwiaXNQcmVzZXQiOmZhbHNlLCJzY2hlbWFWZXJzaW9uIjoiMS4wIn0sInJvdXRlcklkIjoicm91dGVycy1rOGJ3dzVubyIsInR5cGUiOiJEeW5hbWljUGFnZUxpbmsifX0sInN0cnVjdHVyZSI6eyJNRU1CRVJTX0xPR0lOX01FTlUiOnsiaWQiOiJNRU1CRVJTX0xPR0lOX01FTlUiLCJpdGVtcyI6WyIjZGF0YUl0ZW0tazhid3c3bmQiXX0sImRhdGFJdGVtLWs4Ynd3N25kIjp7ImlkIjoiZGF0YUl0ZW0tazhid3c3bmQiLCJpdGVtcyI6W119fX0=",
+  "content": {
+    "data": {
+      "MEMBERS_LOGIN_MENU": {
+        "appId": 6680,
+        "id": "MEMBERS_LOGIN_MENU",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "name": "Login Menu",
+        "type": "CustomMenu"
+      },
+      "dataItem-k8bww7nd": {
+        "id": "dataItem-k8bww7nd",
+        "isVisible": true,
+        "isVisibleMobile": true,
+        "label": "My Account",
+        "link": "#dataItem-k8bww7nd1",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "type": "BasicMenuItem"
+      },
+      "dataItem-k8bww7nd1": {
+        "id": "dataItem-k8bww7nd1",
+        "innerRoute": "my-account",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "routerId": "routers-k8bww5no",
+        "type": "DynamicPageLink"
+      }
+    },
+    "structure": {
+      "MEMBERS_LOGIN_MENU": {
+        "id": "MEMBERS_LOGIN_MENU",
+        "items": [
+          "#dataItem-k8bww7nd"
+        ]
+      },
+      "dataItem-k8bww7nd": {
+        "id": "dataItem-k8bww7nd",
+        "items": []
+      }
+    }
+  },
   "documentSchemaVersion": "1.0"
 }

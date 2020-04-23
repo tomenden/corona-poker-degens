@@ -1,4 +1,9 @@
 {
-  "content": "eyJhcHBsaWNhdGlvblR5cGUiOiJIdG1sV2ViIiwiZG9jdW1lbnRUeXBlIjoiVUdDIiwic2l0ZUlkIjoiMjY4NjRiZDEtNTkyOS00NTc0LWIwMmYtMGE1MTNjYTViZDU1Iiwic2l0ZVRpdGxlU0VPIjoiIn0=",
+  "content": {
+    "applicationType": "HtmlWeb",
+    "documentType": "UGC",
+    "siteId": "26864bd1-5929-4574-b02f-0a513ca5bd55",
+    "siteTitleSEO": ""
+  },
   "documentSchemaVersion": "1.0"
 }

@@ -1,4 +1,7 @@
 {
-  "content": "eyJyZXZpc2lvbiI6NTUsInZlcnNpb24iOjE1ODc1MDY0Njg2Mjl9",
+  "content": {
+    "revision": 55,
+    "version": 1587506468629
+  },
   "documentSchemaVersion": "1.0"
 }

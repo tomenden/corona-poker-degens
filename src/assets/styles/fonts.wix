@@ -1,4 +1,16 @@
 {
-  "content": "WyJub3JtYWwgbm9ybWFsIG5vcm1hbCA3NXB4LzEuNGVtIGpvY2tleStvbmUge2NvbG9yXzJ9Iiwibm9ybWFsIG5vcm1hbCBib2xkIDE0cHgvMS4xZW0gRW5yaXF1ZXRhIHtjb2xvcl8xNX0iLCJub3JtYWwgbm9ybWFsIG5vcm1hbCA0MHB4LzEuNGVtIGVucmlxdWV0YSB7Y29sb3JfMjN9Iiwibm9ybWFsIG5vcm1hbCBub3JtYWwgNjVweC8xLjRlbSBlbnJpcXVldGEge2NvbG9yXzJ9Iiwibm9ybWFsIG5vcm1hbCBub3JtYWwgNDBweC8xLjRlbSBlbnJpcXVldGEge2NvbG9yXzJ9Iiwibm9ybWFsIG5vcm1hbCBub3JtYWwgMzNweC8xLjRlbSBlbnJpcXVldGEge2NvbG9yXzJ9Iiwibm9ybWFsIG5vcm1hbCBub3JtYWwgMjNweC8xLjRlbSBqb2NrZXkrb25lIHtjb2xvcl8yfSIsIm5vcm1hbCBub3JtYWwgbm9ybWFsIDIycHgvMS40ZW0gZW5yaXF1ZXRhIHtjb2xvcl8yfSIsIm5vcm1hbCBub3JtYWwgbm9ybWFsIDE1cHgvMS40ZW0gZW5yaXF1ZXRhIHtjb2xvcl8yfSIsIm5vcm1hbCBub3JtYWwgbm9ybWFsIDEzcHgvMS40ZW0gam9ja2V5K29uZSB7Y29sb3JfMn0iLCJub3JtYWwgbm9ybWFsIG5vcm1hbCAxM3B4LzEuM2VtIEpvY2tleStPbmUge2NvbG9yXzE1fSJd",
+  "content": [
+    "normal normal normal 75px/1.4em jockey+one {color_2}",
+    "normal normal bold 14px/1.1em Enriqueta {color_15}",
+    "normal normal normal 40px/1.4em enriqueta {color_23}",
+    "normal normal normal 65px/1.4em enriqueta {color_2}",
+    "normal normal normal 40px/1.4em enriqueta {color_2}",
+    "normal normal normal 33px/1.4em enriqueta {color_2}",
+    "normal normal normal 23px/1.4em jockey+one {color_2}",
+    "normal normal normal 22px/1.4em enriqueta {color_2}",
+    "normal normal normal 15px/1.4em enriqueta {color_2}",
+    "normal normal normal 13px/1.4em jockey+one {color_2}",
+    "normal normal normal 13px/1.3em Jockey+One {color_15}"
+  ],
   "documentSchemaVersion": "1.0"
 }

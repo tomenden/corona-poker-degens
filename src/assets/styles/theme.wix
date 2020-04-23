@@ -1,4 +1,40 @@
 {
-  "content": "eyJCQVNFX1RIRU1FX0RJUkVDVE9SWSI6ImJhc2UiLCJCR19ESVJFQ1RPUlkiOiJwaG90b2dyYXBoeSIsIkNPTlRBQ1RfRElSRUNUT1JZIjoicGhvdG9ncmFwaHkvY29udGFjdCIsIkVYVEVSTkFMX0xJTktTX0RJUkVDVE9SWSI6InBob3RvZ3JhcGh5L2V4dGVybmFsIiwiTkVUV09SS1NfRElSRUNUT1JZIjoicGhvdG9ncmFwaHkvbmV0d29yayIsIlBBR0VTX0RJUkVDVE9SWSI6InBob3RvZ3JhcGh5L3BhZ2VzIiwiVEhFTUVfRElSRUNUT1JZIjoicGhvdG9ncmFwaHkiLCJXRUJfVEhFTUVfRElSRUNUT1JZIjoidmlld2VyIiwiYm9yZGVyIjpbIjAuMTVlbSBzb2xpZCBbY29sb3JfMV0iLCIwLjI1ZW0gc29saWQgW2NvbG9yXzJdIiwiMC4zNWVtIHNvbGlkIFtjb2xvcl8zXSJdLCJidWxsZXRTaXplIjoiMS41IiwiY29tcG9uZW50U3BhY2luZyI6IjAuNDVlbSIsImhlYWRlclNwYWNpbmciOiIyLjI1ZW0iLCJpY29uU2l6ZSI6IjMuMiIsImljb25TcGFjaW5nIjoiMC43NWVtIiwiaWQiOiJUSEVNRV9EQVRBIiwiaXRlbVNwYWNpbmciOiIwLjc1ZW0iLCJtZXRhRGF0YSI6eyJpc0hpZGRlbiI6ZmFsc2UsImlzUHJlc2V0Ijp0cnVlLCJzY2hlbWFWZXJzaW9uIjoiMS4wIn0sIm1vYmlsZUJnIjoiODQ3NzBmXzYyMGQ4YTE2YjRmMTUyMTQ3YmNiMjUyNzU0NjkwZjVkLnBuZyA1MDBweCA1MDBweCBjZW50ZXIgdG9wIGF1dG8gcmVwZWF0IHJlcGVhdCBmaXhlZCB7Y29sb3JfMTF9IiwicGFkZGluZzEiOiIwIDAgMCAwIiwicGFkZGluZzIiOiIwLjBlbSAwLjVlbSAwLjBlbSAwLjVlbSIsInBhZGRpbmczIjoiMS4wZW0gMC4wZW0gMS4wZW0gMC4wZW0iLCJzaXRlQmciOiI4NDc3MGZfNjIwZDhhMTZiNGYxNTIxNDdiY2IyNTI3NTQ2OTBmNWQucG5nIDUwMHB4IDUwMHB4IGNlbnRlciB0b3AgYXV0byByZXBlYXQgcmVwZWF0IGZpeGVkIHtjb2xvcl8xMX0iLCJ0aGVtZVByZXNldHMiOnsibW9iaWxlQmciOnRydWV9LCJ0aHVtYlNwYWNpbmciOiIwLjIzZW0iLCJ0eXBlIjoiV0ZsYXRUaGVtZSJ9",
+  "content": {
+    "BASE_THEME_DIRECTORY": "base",
+    "BG_DIRECTORY": "photography",
+    "CONTACT_DIRECTORY": "photography/contact",
+    "EXTERNAL_LINKS_DIRECTORY": "photography/external",
+    "NETWORKS_DIRECTORY": "photography/network",
+    "PAGES_DIRECTORY": "photography/pages",
+    "THEME_DIRECTORY": "photography",
+    "WEB_THEME_DIRECTORY": "viewer",
+    "border": [
+      "0.15em solid [color_1]",
+      "0.25em solid [color_2]",
+      "0.35em solid [color_3]"
+    ],
+    "bulletSize": "1.5",
+    "componentSpacing": "0.45em",
+    "headerSpacing": "2.25em",
+    "iconSize": "3.2",
+    "iconSpacing": "0.75em",
+    "id": "THEME_DATA",
+    "itemSpacing": "0.75em",
+    "metaData": {
+      "isHidden": false,
+      "isPreset": true,
+      "schemaVersion": "1.0"
+    },
+    "mobileBg": "84770f_620d8a16b4f152147bcb252754690f5d.png 500px 500px center top auto repeat repeat fixed {color_11}",
+    "padding1": "0 0 0 0",
+    "padding2": "0.0em 0.5em 0.0em 0.5em",
+    "padding3": "1.0em 0.0em 1.0em 0.0em",
+    "siteBg": "84770f_620d8a16b4f152147bcb252754690f5d.png 500px 500px center top auto repeat repeat fixed {color_11}",
+    "themePresets": {
+      "mobileBg": true
+    },
+    "thumbSpacing": "0.23em",
+    "type": "WFlatTheme"
+  },
   "documentSchemaVersion": "1.0"
 }

@@ -1,4 +1,13 @@
 {
-  "content": "eyJhcHBEZWZpbml0aW9uSWQiOiIxNGNjNTliYy1mMGI3LTE1YjgtZTFjNy04OWNlNDFkMGUwYzkiLCJjb25maWciOiJ7XCJ0eXBlXCI6XCJwcml2YXRlXCIsXCJwYXR0ZXJuc1wiOntcIi9teS1hY2NvdW50XCI6e1wic29jaWFsSG9tZVwiOmZhbHNlLFwiYXBwRGF0YVwiOntcImFwcERlZmluaXRpb25JZFwiOlwiMTRjZmZkODEtNTIxNS0wYTdmLTIyZjgtMDc0YjBlMjQwMWZiXCIsXCJhcHBQYWdlSWRcIjpcIm1lbWJlcl9pbmZvXCIsXCJtZW51T3JkZXJcIjozLFwidmlzaWJsZUZvclJvbGVzXCI6W119LFwicGFnZVwiOlwiODZkMWMyMGMtODdmNi00NTIzLTg0MmEtYThiNmU1MDYwNTBlXCIsXCJzZW9EYXRhXCI6e1widGl0bGVcIjpcIk15IEFjY291bnRcIixcImRlc2NyaXB0aW9uXCI6XCJcIixcImtleXdvcmRzXCI6XCJcIixcIm5vSW5kZXhcIjpcInRydWVcIn0sXCJ0aXRsZVwiOlwiTXkgQWNjb3VudFwifX19IiwiZ3JvdXAiOiJtZW1iZXJzIiwicGFnZXMiOnsiODZkMWMyMGMtODdmNi00NTIzLTg0MmEtYThiNmU1MDYwNTBlIjoid3ppYzEifSwicHJlZml4IjoiYWNjb3VudCIsInJvdXRlSWQiOiJyb3V0ZXJzLWs4Ynd3NW5vIn0=",
+  "content": {
+    "appDefinitionId": "14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9",
+    "config": "{\"type\":\"private\",\"patterns\":{\"/my-account\":{\"socialHome\":false,\"appData\":{\"appDefinitionId\":\"14cffd81-5215-0a7f-22f8-074b0e2401fb\",\"appPageId\":\"member_info\",\"menuOrder\":3,\"visibleForRoles\":[]},\"page\":\"86d1c20c-87f6-4523-842a-a8b6e506050e\",\"seoData\":{\"title\":\"My Account\",\"description\":\"\",\"keywords\":\"\",\"noIndex\":\"true\"},\"title\":\"My Account\"}}}",
+    "group": "members",
+    "pages": {
+      "86d1c20c-87f6-4523-842a-a8b6e506050e": "wzic1"
+    },
+    "prefix": "account",
+    "routeId": "routers-k8bww5no"
+  },
   "documentSchemaVersion": "1.0"
 }

@@ -1,4 +1,10 @@
 {
-  "content": "eyJhcHBEZWZpbml0aW9uSWQiOiIxNGNjNTliYy1mMGI3LTE1YjgtZTFjNy04OWNlNDFkMGUwYzkiLCJjb25maWciOiJ7XCJ0eXBlXCI6XCJwdWJsaWNcIn0iLCJncm91cCI6Im1lbWJlcnMiLCJwcmVmaXgiOiJwcm9maWxlIiwicm91dGVJZCI6InJvdXRlcnMtazhid3c1bnAifQ==",
+  "content": {
+    "appDefinitionId": "14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9",
+    "config": "{\"type\":\"public\"}",
+    "group": "members",
+    "prefix": "profile",
+    "routeId": "routers-k8bww5np"
+  },
   "documentSchemaVersion": "1.0"
 }

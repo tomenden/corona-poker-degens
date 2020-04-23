@@ -1,4 +1,24 @@
 {
-  "content": "eyJkYXRhIjp7Ik1FTUJFUlNfTE9HSU5fSUNPTlNfTUVOVSI6eyJhcHBJZCI6NjY4MCwiaWQiOiJNRU1CRVJTX0xPR0lOX0lDT05TX01FTlUiLCJtZXRhRGF0YSI6eyJpc0hpZGRlbiI6ZmFsc2UsImlzUHJlc2V0IjpmYWxzZSwic2NoZW1hVmVyc2lvbiI6IjEuMCJ9LCJuYW1lIjoiTG9naW4gSWNvbnMiLCJ0eXBlIjoiQ3VzdG9tTWVudSJ9fSwic3RydWN0dXJlIjp7Ik1FTUJFUlNfTE9HSU5fSUNPTlNfTUVOVSI6eyJpZCI6Ik1FTUJFUlNfTE9HSU5fSUNPTlNfTUVOVSIsIml0ZW1zIjpbXX19fQ==",
+  "content": {
+    "data": {
+      "MEMBERS_LOGIN_ICONS_MENU": {
+        "appId": 6680,
+        "id": "MEMBERS_LOGIN_ICONS_MENU",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "name": "Login Icons",
+        "type": "CustomMenu"
+      }
+    },
+    "structure": {
+      "MEMBERS_LOGIN_ICONS_MENU": {
+        "id": "MEMBERS_LOGIN_ICONS_MENU",
+        "items": []
+      }
+    }
+  },
   "documentSchemaVersion": "1.0"
 }

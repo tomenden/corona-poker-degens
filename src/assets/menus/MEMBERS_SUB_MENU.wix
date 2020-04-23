@@ -1,4 +1,54 @@
 {
-  "content": "eyJkYXRhIjp7Ik1FTUJFUlNfU1VCX01FTlUiOnsiYXBwSWQiOjY2ODAsImlkIjoiTUVNQkVSU19TVUJfTUVOVSIsIm1ldGFEYXRhIjp7ImlzSGlkZGVuIjpmYWxzZSwiaXNQcmVzZXQiOmZhbHNlLCJzY2hlbWFWZXJzaW9uIjoiMS4wIn0sIm5hbWUiOiJNZW1iZXIgTWVudSIsInR5cGUiOiJDdXN0b21NZW51In0sImRhdGFJdGVtLWs4Ynd3N245Ijp7ImlkIjoiZGF0YUl0ZW0tazhid3c3bjkiLCJpc1Zpc2libGUiOnRydWUsImlzVmlzaWJsZU1vYmlsZSI6dHJ1ZSwibGFiZWwiOiJNeSBBY2NvdW50IiwibGluayI6IiNkYXRhSXRlbS1rOGJ3dzduYSIsIm1ldGFEYXRhIjp7ImlzSGlkZGVuIjpmYWxzZSwiaXNQcmVzZXQiOmZhbHNlLCJzY2hlbWFWZXJzaW9uIjoiMS4wIn0sInR5cGUiOiJCYXNpY01lbnVJdGVtIn0sImRhdGFJdGVtLWs4Ynd3N25hIjp7ImlkIjoiZGF0YUl0ZW0tazhid3c3bmEiLCJpbm5lclJvdXRlIjoibXktYWNjb3VudCIsIm1ldGFEYXRhIjp7ImlzSGlkZGVuIjpmYWxzZSwiaXNQcmVzZXQiOmZhbHNlLCJzY2hlbWFWZXJzaW9uIjoiMS4wIn0sInJvdXRlcklkIjoicm91dGVycy1rOGJ3dzVubyIsInR5cGUiOiJEeW5hbWljUGFnZUxpbmsifX0sInN0cnVjdHVyZSI6eyJNRU1CRVJTX1NVQl9NRU5VIjp7ImlkIjoiTUVNQkVSU19TVUJfTUVOVSIsIml0ZW1zIjpbIiNkYXRhSXRlbS1rOGJ3dzduOSJdfSwiZGF0YUl0ZW0tazhid3c3bjkiOnsiaWQiOiJkYXRhSXRlbS1rOGJ3dzduOSIsIml0ZW1zIjpbXX19fQ==",
+  "content": {
+    "data": {
+      "MEMBERS_SUB_MENU": {
+        "appId": 6680,
+        "id": "MEMBERS_SUB_MENU",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "name": "Member Menu",
+        "type": "CustomMenu"
+      },
+      "dataItem-k8bww7n9": {
+        "id": "dataItem-k8bww7n9",
+        "isVisible": true,
+        "isVisibleMobile": true,
+        "label": "My Account",
+        "link": "#dataItem-k8bww7na",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "type": "BasicMenuItem"
+      },
+      "dataItem-k8bww7na": {
+        "id": "dataItem-k8bww7na",
+        "innerRoute": "my-account",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "routerId": "routers-k8bww5no",
+        "type": "DynamicPageLink"
+      }
+    },
+    "structure": {
+      "MEMBERS_SUB_MENU": {
+        "id": "MEMBERS_SUB_MENU",
+        "items": [
+          "#dataItem-k8bww7n9"
+        ]
+      },
+      "dataItem-k8bww7n9": {
+        "id": "dataItem-k8bww7n9",
+        "items": []
+      }
+    }
+  },
   "documentSchemaVersion": "1.0"
 }
