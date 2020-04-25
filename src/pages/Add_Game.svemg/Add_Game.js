@@ -3,6 +3,7 @@ import wixData from "wix-data";
 import wixLocation from "wix-location";
 import wixUsers from "wix-users";
 import { getResultsFromScreenshot } from "backend/getResultsFromScreenshot";
+import { getNumPlacesPaid, calcPayout } from "public/tournament";
 
 $w.onReady(async function () {
   const getBuyin = () => Number($w("#buyin").value);
@@ -64,7 +65,7 @@ $w.onReady(async function () {
     updatePayoutText()
     updatePayoutVisibility()
     updateValidDropdownOptions()
-    const numOfPlacesPayed = getNumPlacesPaid()
+    const numOfPlacesPayed = getNumPlacesPaid(checkboxGroup.value.length)
     for (let i = 0; i < numOfPlacesPayed; i++) {
       $w(`#dropdown${i+1}`).value = results[i]
     }
@@ -122,7 +123,7 @@ $w.onReady(async function () {
   }
 
   function updatePayoutVisibility() {
-    const numPlaces = getNumPlacesPaid();
+    const numPlaces = getNumPlacesPaid(checkboxGroup.value.length);
     payoutInputs.forEach((dropdown, i) => {
       if (i < numPlaces) {
         dropdown.expand();
@@ -148,11 +149,19 @@ $w.onReady(async function () {
     }
   }
 
+  const updateRequiredDropdowns = () => {
+    const numOfPlacesPayed = getNumPlacesPaid(checkboxGroup.value.length)
+    payoutInputs.forEach((input, index) => {
+      input.required = index < numOfPlacesPayed
+    })
+  }
+
   function updateValidDropdownOptions() {
     const playerBase = checkboxGroup.value.map((playerId) => ({
       label: allPlayersById[playerId].name,
       value: playerId,
     }));
+    updateRequiredDropdowns()
     const alreadySelected = payoutInputs.map((dd) => dd.value);
     payoutInputs.forEach((dropdown, i) => {
       const otherSelectedValues = alreadySelected.slice();
@@ -161,28 +170,5 @@ $w.onReady(async function () {
         ({ value }) => !otherSelectedValues.includes(value)
       );
     });
-  }
-
-  const PAYOUT_TABLE = [
-    {numPlayers: 3, payouts: [1]},
-    {numPlayers: 7, payouts: [0.7, 0.3]},
-    {numPlayers: 13, payouts: [0.5, 0.3, 0.2]},
-    {numPlayers: 20, payouts: [0.4, 0.25, 0.2, 0.15]} //we will need to add more if we get more players
-  ]
-
-  function getNumPlacesPaid() {
-    const n = checkboxGroup.value.length;
-    const {payouts} = PAYOUT_TABLE.find(({numPlayers}) => n <= numPlayers) || PAYOUT_TABLE[3]
-    return payouts.length
-  }
-
-  function calcPayout(n, buyin = 50) {
-    const totalMoney = n * buyin;
-    const payoutStrategy = PAYOUT_TABLE.find(({numPlayers}) => n <= numPlayers)
-    const {payouts} = payoutStrategy
-    payoutInputs.forEach((input, index) => {
-      input.required = !!payouts[index] //required if there's a payout for this index
-    })
-    return payouts.map(factor => Math.round((totalMoney * factor)) - buyin)
   }
 });
