@@ -1,9 +1,8 @@
 // For full API documentation, including code examples, visit https://wix.to/94BuAAs
 import wixData from "wix-data";
 import wixLocation from "wix-location";
-import wixUsers from "wix-users";
 import { getResultsFromScreenshot } from "backend/getResultsFromScreenshot";
-import { getNumPlacesPaid, calcPayout } from "public/tournament";
+import { getNumPlacesPaid, calcPayout, logResults } from "public/tournament";
 
 $w.onReady(async function () {
   const getBuyin = () => Number($w("#buyin").value);
@@ -42,8 +41,11 @@ $w.onReady(async function () {
     $w("#errorIndicator").collapse();
     try {
       const gameResults = getGamePlayerResults();
-      await logGameResults(gameResults);
-      await updatePlayerTotalsInDB(gameResults);
+      const { url } = $w("#uploadButton1").value.length
+          ? await $w("#uploadButton1").startUpload()
+          : { url: null };
+
+      await logResults(gameResults, url);
       $w("#successIndicator").expand();
       wixLocation.to("/");
     } catch (e) {
@@ -71,6 +73,10 @@ $w.onReady(async function () {
     }
   });
 
+  /**
+   *
+   * @return {GameResult} map from playerId to result
+   */
   function getGamePlayerResults() {
     const buyin = getBuyin();
     const [first = 0, second = 0, third = 0, fourth = 0] = calcPayout(checkboxGroup.value.length, buyin);
@@ -89,37 +95,6 @@ $w.onReady(async function () {
         typeof payoutResults[pId] !== "undefined" ? payoutResults[pId] : -buyin;
       return results;
     }, {});
-  }
-
-  async function logGameResults(gameResults) {
-    const userEmail = await wixUsers.currentUser.getEmail();
-    const playersInGame = Object.keys(gameResults);
-    const { url } = $w("#uploadButton1").value.length
-      ? await $w("#uploadButton1").startUpload()
-      : { url: null };
-    const { _id: gameId } = await wixData.insert("games", {
-      updatedBy: userEmail,
-      numPlayers: playersInGame.length,
-      gameScreenshot: url,
-    });
-    const results = playersInGame.map((playerId) => {
-      const { name: player } = allPlayersById[playerId];
-      return {
-        player,
-        result: gameResults[playerId],
-        gameId, //TODO: should be reference field??
-      };
-    });
-    return wixData.bulkInsert("results", results);
-  }
-
-  async function updatePlayerTotalsInDB(gameResults) {
-    //now updated in DB hook in data.js
-    // const playerDataToUpdate = Object.keys(gameResults).map(playerId => ({
-    // 	...allPlayersById[playerId],
-    // 	total: allPlayersById[playerId].total + gameResults[playerId]
-    // }))
-    // return wixData.bulkUpdate("players", playerDataToUpdate)
   }
 
   function updatePayoutVisibility() {
