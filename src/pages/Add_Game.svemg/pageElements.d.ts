@@ -1,14 +1,16 @@
 type PageElementsMap = {
   "#page1": $w.Page;
-  "#checkboxGroup1": $w.CheckboxGroup;
-  "#dataset2": $w.dataset;
-  "#text17": $w.Text;
-  "#dataset1": $w.dataset;
-  "#buyin": $w.TextInput;
+  "#resultlog": $w.Repeater;
   "#group1": $w.Box;
   "#successIndicator": $w.Text;
   "#errorIndicator": $w.Text;
-  "#text16": $w.Text;
+  "#container2": $w.Container;
+  "#payouts": $w.Text;
+  "#buyin": $w.TextInput;
+  "#tourneytype": $w.Dropdown;
+  "#numplayerstxt": $w.Text;
+  "#bounty": $w.TextInput;
+  "#bountydesc": $w.Text;
   "#dropdown1": $w.Dropdown;
   "#dropdown2": $w.Dropdown;
   "#dropdown3": $w.Dropdown;
@@ -17,6 +19,10 @@ type PageElementsMap = {
   "#button1": $w.Button;
   "#uploadButton1": $w.UploadButton;
   "#button2": $w.Button;
+  "#playername": $w.Text;
+  "#KO": $w.TextInput;
+  "#playerusername": $w.Text;
+  "#didplay": $w.Checkbox;
   "#header1": $w.Header;
   "#footer1": $w.Footer;
   "#container1": $w.HiddenCollapsedElement;

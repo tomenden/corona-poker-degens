@@ -13,11 +13,11 @@ export function getNumPlacesPaid(numPlayersInGame) {
     return payouts.length
 }
 
-export function calcPayout(n, buyin = 50) {
+export function calcPayout(n, buyin = 50, KObuyin = 0) {
     const totalMoney = n * buyin;
     const payoutStrategy = PAYOUT_TABLE.find(({numPlayers}) => n <= numPlayers)
     const {payouts} = payoutStrategy
-    return payouts.map(factor => Math.round((totalMoney * factor)) - buyin)
+    return payouts.map(factor => Math.round((totalMoney * factor)) - (buyin + KObuyin))
 }
 
 /**
