@@ -1277,6 +1277,18 @@
         {
           "componentType": "platform.components.AppController",
           "connectionQuery": "connection-k8bww5ow",
+          "conversionData": {
+            "backgroundColor": "#3D9BE9",
+            "hiddenable": false,
+            "isNonContainableFullWidth": false,
+            "isSemiTransparentContainer": false,
+            "isTransparentContainer": false,
+            "mobileHints": {
+              "hidden": false
+            },
+            "nonLayoutComponent": true,
+            "shouldApplyPreset": true
+          },
           "dataQuery": "#CONTROLLER_COMP_CUSTOM_ID",
           "id": "CONTROLLER_COMP_CUSTOM_ID",
           "layout": {
