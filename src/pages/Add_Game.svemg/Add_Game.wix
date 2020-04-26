@@ -2728,7 +2728,7 @@
                 "id": "comp-k8anto4q",
                 "layout": {
                   "fixedPosition": false,
-                  "height": 30,
+                  "height": 29,
                   "rotationInDegrees": 0,
                   "scale": 1,
                   "width": 310,
@@ -2752,7 +2752,7 @@
                   "scale": 1,
                   "width": 125,
                   "x": 9,
-                  "y": 38
+                  "y": 37
                 },
                 "propertyQuery": "propItem-k8q76rxi",
                 "skin": "wysiwyg.viewer.skins.appinputs.AppsTextInputSkin",
@@ -2769,9 +2769,9 @@
                   "height": 74,
                   "rotationInDegrees": 0,
                   "scale": 1,
-                  "width": 304,
+                  "width": 305,
                   "x": 147,
-                  "y": 44
+                  "y": 43
                 },
                 "propertyQuery": "propItem-k9g1xhes",
                 "skin": "ComboBoxInputSkin",
@@ -2790,7 +2790,7 @@
                   "scale": 1,
                   "width": 310,
                   "x": 5,
-                  "y": 197
+                  "y": 196
                 },
                 "propertyQuery": "propItem-k8amdic6",
                 "skin": "wysiwyg.viewer.skins.WRichTextNewSkin",
@@ -2809,7 +2809,7 @@
                   "scale": 1,
                   "width": 125,
                   "x": 9,
-                  "y": 129
+                  "y": 128
                 },
                 "mobileHintsQuery": "mobileHints-k9g1zm71",
                 "propertyQuery": "propItem-k9g1zm651",
@@ -2824,12 +2824,12 @@
                 "id": "comp-k9g26imb",
                 "layout": {
                   "fixedPosition": false,
-                  "height": 30,
+                  "height": 29,
                   "rotationInDegrees": 0,
                   "scale": 1,
                   "width": 310,
                   "x": 147,
-                  "y": 129
+                  "y": 128
                 },
                 "propertyQuery": "propItem-k9g26in9",
                 "skin": "wysiwyg.viewer.skins.WRichTextNewSkin",
@@ -2848,7 +2848,7 @@
                   "scale": 1,
                   "width": 305,
                   "x": 5,
-                  "y": 321
+                  "y": 320
                 },
                 "propertyQuery": "propItem-k8amm1gk",
                 "skin": "ComboBoxInputSkin",
@@ -2867,7 +2867,7 @@
                   "scale": 1,
                   "width": 305,
                   "x": 5,
-                  "y": 381
+                  "y": 380
                 },
                 "propertyQuery": "propItem-k8ammich1",
                 "skin": "ComboBoxInputSkin",
@@ -2886,7 +2886,7 @@
                   "scale": 1,
                   "width": 305,
                   "x": 5,
-                  "y": 441
+                  "y": 440
                 },
                 "propertyQuery": "propItem-k8amtwko",
                 "skin": "ComboBoxInputSkin",
@@ -2905,7 +2905,7 @@
                   "scale": 1,
                   "width": 305,
                   "x": 5,
-                  "y": 501
+                  "y": 500
                 },
                 "mobileHintsQuery": "mobileHints-k95bssf4",
                 "propertyQuery": "propItem-k95bssdh",
@@ -2925,7 +2925,7 @@
                   "scale": 1,
                   "width": 310,
                   "x": 8,
-                  "y": 550
+                  "y": 549
                 },
                 "propertyQuery": "propItem-k8dcknif",
                 "skin": "wysiwyg.viewer.skins.WRichTextNewSkin",
@@ -2944,7 +2944,7 @@
                   "scale": 1,
                   "width": 164,
                   "x": 81,
-                  "y": 687
+                  "y": 686
                 },
                 "propertyQuery": "propItem-k8amtbkb",
                 "styleId": "b1",
@@ -2962,7 +2962,7 @@
                   "scale": 1,
                   "width": 180,
                   "x": 71,
-                  "y": 619
+                  "y": 618
                 },
                 "propertyQuery": "propItem-k8lvku9p",
                 "skin": "wysiwyg.viewer.skins.FileUploaderDefaultSkin",
@@ -2981,7 +2981,7 @@
                   "scale": 1,
                   "width": 233,
                   "x": 259,
-                  "y": 619
+                  "y": 618
                 },
                 "propertyQuery": "propItem-k9631qbv",
                 "styleId": "b1",
@@ -2992,7 +2992,7 @@
             "id": "comp-k9g2ldd8",
             "layout": {
               "fixedPosition": false,
-              "height": 727,
+              "height": 726,
               "rotationInDegrees": 0,
               "scale": 1,
               "width": 492,
@@ -3009,12 +3009,12 @@
             "id": "comp-k8bc5tm6",
             "layout": {
               "fixedPosition": false,
-              "height": 45,
+              "height": 44,
               "rotationInDegrees": 0,
               "scale": 1,
               "width": 155,
               "x": 481,
-              "y": 808
+              "y": 807
             },
             "propertyQuery": "propItem-k8bc5toa",
             "skin": "wysiwyg.viewer.skins.WRichTextNewSkin",
@@ -3028,12 +3028,12 @@
             "id": "comp-k8bc661r",
             "layout": {
               "fixedPosition": false,
-              "height": 45,
+              "height": 44,
               "rotationInDegrees": 0,
               "scale": 1,
               "width": 155,
               "x": 680,
-              "y": 808
+              "y": 807
             },
             "propertyQuery": "propItem-k8bc66361",
             "skin": "wysiwyg.viewer.skins.WRichTextNewSkin",
@@ -3046,7 +3046,7 @@
         "id": "svemg",
         "layout": {
           "fixedPosition": false,
-          "height": 853,
+          "height": 851,
           "rotationInDegrees": 0,
           "scale": 1,
           "width": 980,

@@ -132,6 +132,9 @@ $w.onReady(async function () {
       repeaterDataByPlayerId[pId].checked = true
     })
     $w("#resultlog").data = values(repeaterDataByPlayerId)
+    $w("#resultlog").forEachItem(($item, itemData) => {
+      $item("#didplay").checked = itemData.checked || false;
+    })
     updatePayoutText()
     updatePayoutVisibility()
     updateValidDropdownOptions()
