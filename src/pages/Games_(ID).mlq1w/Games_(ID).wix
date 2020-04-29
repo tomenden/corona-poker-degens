@@ -161,7 +161,6 @@
           "propItem-k9lrlmt7": {
             "autoFill": false,
             "displayMode": "fill",
-            "effectName": "none",
             "id": "propItem-k9lrlmt7",
             "metaData": {
               "isHidden": false,
@@ -506,34 +505,6 @@
           }
         },
         "document_data": {
-          "dataItem-k9lrlmqi": {
-            "alt": "",
-            "height": 500,
-            "id": "dataItem-k9lrlmqi",
-            "metaData": {
-              "isHidden": false,
-              "isPreset": false,
-              "schemaVersion": "2.0"
-            },
-            "title": "",
-            "type": "Image",
-            "uri": "84770f_620d8a16b4f152147bcb252754690f5d.png",
-            "width": 500
-          },
-          "dataItem-k9lrlmqj": {
-            "alt": "",
-            "height": 500,
-            "id": "dataItem-k9lrlmqj",
-            "metaData": {
-              "isHidden": false,
-              "isPreset": false,
-              "schemaVersion": "2.0"
-            },
-            "title": "",
-            "type": "Image",
-            "uri": "84770f_620d8a16b4f152147bcb252754690f5d.png",
-            "width": 500
-          },
           "dataItem-k9lrlmsl": {
             "id": "dataItem-k9lrlmsl",
             "linkList": [],
@@ -694,7 +665,7 @@
             "color": "{color_11}",
             "fittingType": "fill",
             "id": "mlq1w_desktop_bg",
-            "mediaRef": "#dataItem-k9lrlmqi",
+            "mediaRef": "#mlq1w_desktop_mediaRef",
             "metaData": {
               "isHidden": false,
               "isPreset": false,
@@ -703,6 +674,20 @@
             "scrollType": "fixed",
             "type": "BackgroundMedia"
           },
+          "mlq1w_desktop_mediaRef": {
+            "alt": "",
+            "height": 500,
+            "id": "mlq1w_desktop_mediaRef",
+            "metaData": {
+              "isHidden": false,
+              "isPreset": false,
+              "schemaVersion": "2.0"
+            },
+            "title": "",
+            "type": "Image",
+            "uri": "84770f_620d8a16b4f152147bcb252754690f5d.png",
+            "width": 500
+          },
           "mlq1w_mobile_bg": {
             "alignType": "top",
             "color": "{color_11}",
@@ -710,7 +695,7 @@
             "colorOverlayOpacity": 0,
             "fittingType": "fill",
             "id": "mlq1w_mobile_bg",
-            "mediaRef": "#dataItem-k9lrlmqj",
+            "mediaRef": "#mlq1w_mobile_mediaRef",
             "metaData": {
               "isHidden": false,
               "isPreset": false,
@@ -718,6 +703,20 @@
             },
             "scrollType": "scroll",
             "type": "BackgroundMedia"
+          },
+          "mlq1w_mobile_mediaRef": {
+            "alt": "",
+            "height": 500,
+            "id": "mlq1w_mobile_mediaRef",
+            "metaData": {
+              "isHidden": false,
+              "isPreset": false,
+              "schemaVersion": "2.0"
+            },
+            "title": "",
+            "type": "Image",
+            "uri": "84770f_620d8a16b4f152147bcb252754690f5d.png",
+            "width": 500
           }
         },
         "mobile_hints": {
@@ -984,7 +983,6 @@
       },
       "pageUriSEO": "games-title",
       "pagesPlatformApplications": [
-        "dataBinding",
         "wixCode"
       ],
       "structure": {
@@ -1410,7 +1408,7 @@
         "styleId": "p1",
         "type": "Page"
       },
-      "title": "Games (Title)",
+      "title": "Games (ID)",
       "translations": {}
     },
     "pageUriSeo": "games-title",

@@ -5,9 +5,9 @@ type PageElementsMap = {
   "#dataset1": $w.dataset;
   "#column1": $w.Column;
   "#title": $w.Text;
+  "#group1": $w.Box;
   "#text17": $w.Text;
   "#table1": $w.Table;
-  "#group1": $w.Box;
   "#name": $w.Text;
   "#text16": $w.Text;
   "#header1": $w.Header;
