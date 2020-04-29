@@ -1,0 +1,13 @@
+{
+  "content": {
+    "appDefinitionId": "dataBinding",
+    "config": "{\"patterns\":{\"/\":{\"pageRole\":\"63c7bae7-a529-448e-ade3-03ccc131ae27\",\"title\":\"players\",\"config\":{\"collection\":\"players\"},\"seoMetaTags\":{}},\"/{username}\":{\"pageRole\":\"1a5a3a1f-3939-4f38-871b-fd83079104d3\",\"title\":\"{username}\",\"config\":{\"collection\":\"players\",\"pageSize\":1},\"seoMetaTags\":{\"description\":\"\",\"keywords\":\"\",\"og:image\":\"\"}}}}",
+    "pages": {
+      "1a5a3a1f-3939-4f38-871b-fd83079104d3": "ul3sv",
+      "63c7bae7-a529-448e-ade3-03ccc131ae27": "gi18w"
+    },
+    "prefix": "players",
+    "routeId": "routers-k9lqt7va"
+  },
+  "documentSchemaVersion": "1.0"
+}

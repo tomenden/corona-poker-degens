@@ -19,6 +19,20 @@
   "ownerAppId": null,
   "displayNamespace": null,
   "fields": {
+    "link-games-title": {
+      "displayName": "Games (ID)",
+      "type": "pagelink",
+      "calculator": {
+        "id": "FIELDS_PATTERN",
+        "config": {
+          "pattern": "/games/{_id}"
+        }
+      },
+      "plugin": "dataBinding",
+      "systemField": true,
+      "isDeleted": false,
+      "index": 9
+    },
     "numPlayers": {
       "displayName": "numPlayers",
       "sortable": true,
@@ -59,10 +73,24 @@
       "type": "datetime",
       "index": 4
     },
+    "link-games-all": {
+      "displayName": "Games (All)",
+      "type": "pagelink",
+      "calculator": {
+        "id": "FIELDS_PATTERN",
+        "config": {
+          "pattern": "/games/"
+        }
+      },
+      "plugin": "dataBinding",
+      "systemField": true,
+      "isDeleted": false,
+      "index": 10
+    },
     "gameDate": {
       "displayName": "gameDate",
       "sortable": true,
-      "isDeleted": false,
+      "isDeleted": true,
       "systemField": false,
       "type": "datetime",
       "index": 8

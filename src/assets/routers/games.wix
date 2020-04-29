@@ -1,0 +1,14 @@
+{
+  "content": {
+    "appDefinitionId": "dataBinding",
+    "config": "{\"patterns\":{\"/\":{\"pageRole\":\"07e6c234-47d7-4962-bbf2-ab72576be06b\",\"title\":\"games\",\"config\":{\"collection\":\"games\",\"pageSize\":20},\"seoMetaTags\":{}},\"/{_id}\":{\"pageRole\":\"5cf40d43-5a0f-4080-b80d-fef4471d03f8\",\"title\":\"{_id}\",\"config\":{\"collection\":\"games\"},\"seoMetaTags\":{}}}}",
+    "pages": {
+      "07e6c234-47d7-4962-bbf2-ab72576be06b": "lbgiq",
+      "5cf40d43-5a0f-4080-b80d-fef4471d03f8": "mlq1w"
+    },
+    "prefix": "games",
+    "routeId": "routers-k9lrlmhv",
+    "routerId": "routers-k9lrlmhv"
+  },
+  "documentSchemaVersion": "1.0"
+}

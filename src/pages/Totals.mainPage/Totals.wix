@@ -63,6 +63,7 @@
             "headerHeight": 60,
             "heightLayout": "auto",
             "horizontalAlignment": "center",
+            "id": "mobile_propItem-k8alhtpw",
             "isCollapsed": false,
             "isHidden": false,
             "linkTarget": "_blank",
@@ -920,6 +921,17 @@
           {
             "componentType": "platform.components.AppController",
             "connectionQuery": "connection-k8alrkuu",
+            "conversionData": {
+              "hiddenable": false,
+              "isNonContainableFullWidth": false,
+              "isSemiTransparentContainer": false,
+              "isTransparentContainer": false,
+              "mobileHints": {
+                "hidden": false
+              },
+              "nonLayoutComponent": true,
+              "shouldApplyPreset": true
+            },
             "dataQuery": "#dataItem-k8alrkuo",
             "id": "comp-k8alrktr",
             "layout": {
@@ -937,6 +949,18 @@
           {
             "componentType": "platform.components.AppController",
             "connectionQuery": "connection-k8lwfg6j",
+            "conversionData": {
+              "backgroundColor": "#3D9BE9",
+              "hiddenable": false,
+              "isNonContainableFullWidth": false,
+              "isSemiTransparentContainer": false,
+              "isTransparentContainer": false,
+              "mobileHints": {
+                "hidden": false
+              },
+              "nonLayoutComponent": true,
+              "shouldApplyPreset": true
+            },
             "dataQuery": "#dataItem-k8lwfg69",
             "id": "comp-k8lwfg59",
             "layout": {

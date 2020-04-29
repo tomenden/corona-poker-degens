@@ -49,7 +49,7 @@
       "referencedCollection": "games",
       "isDeleted": false,
       "systemField": false,
-      "type": "text",
+      "type": "reference",
       "index": 7
     },
     "result": {
@@ -71,6 +71,7 @@
     "player": {
       "displayName": "player",
       "sortable": true,
+      "referencedCollection": "players",
       "isDeleted": false,
       "systemField": false,
       "type": "text",
@@ -83,6 +84,15 @@
       "systemField": false,
       "type": "text",
       "index": 0
+    },
+    "user": {
+      "displayName": "user",
+      "sortable": true,
+      "referencedCollection": "players",
+      "isDeleted": false,
+      "systemField": false,
+      "type": "reference",
+      "index": 8
     }
   },
   "displayField": "title",
