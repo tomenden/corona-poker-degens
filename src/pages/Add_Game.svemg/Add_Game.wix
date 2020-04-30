@@ -2592,8 +2592,8 @@
       },
       "pageUriSEO": "add-game",
       "pagesPlatformApplications": [
-        "dataBinding",
-        "wixCode"
+        "wixCode",
+        "dataBinding"
       ],
       "structure": {
         "componentType": "mobile.core.components.Page",

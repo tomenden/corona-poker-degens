@@ -9,7 +9,6 @@
           "schemaVersion": "1.0"
         },
         "name": "Custom Main Menu",
-        "syncWithPages": false,
         "type": "CustomMenu"
       },
       "dataItem-k9lqtbes": {
@@ -34,7 +33,6 @@
           "schemaVersion": "1.0"
         },
         "routerId": "routers-k9lqt7va",
-        "target": "_self",
         "type": "DynamicPageLink"
       },
       "dataItem-k9lrlqee": {
@@ -59,7 +57,6 @@
           "schemaVersion": "1.0"
         },
         "routerId": "routers-k9lrlmhv",
-        "target": "_self",
         "type": "DynamicPageLink"
       }
     },

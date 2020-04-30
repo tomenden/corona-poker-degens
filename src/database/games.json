@@ -20,17 +20,19 @@
   "displayNamespace": null,
   "fields": {
     "link-games-title": {
+      "plugin": "dataBinding",
       "displayName": "Games (ID)",
-      "type": "pagelink",
       "calculator": {
         "id": "FIELDS_PATTERN",
         "config": {
           "pattern": "/games/{_id}"
         }
       },
-      "plugin": "dataBinding",
-      "systemField": true,
+      "sortable": false,
+      "queryOperators": [],
       "isDeleted": false,
+      "systemField": true,
+      "type": "pagelink",
       "index": 9
     },
     "numPlayers": {
@@ -74,17 +76,19 @@
       "index": 4
     },
     "link-games-all": {
+      "plugin": "dataBinding",
       "displayName": "Games (All)",
-      "type": "pagelink",
       "calculator": {
         "id": "FIELDS_PATTERN",
         "config": {
           "pattern": "/games/"
         }
       },
-      "plugin": "dataBinding",
-      "systemField": true,
+      "sortable": false,
+      "queryOperators": [],
       "isDeleted": false,
+      "systemField": true,
+      "type": "pagelink",
       "index": 10
     },
     "gameDate": {

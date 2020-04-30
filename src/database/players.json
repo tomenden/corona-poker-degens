@@ -28,17 +28,19 @@
       "index": 5
     },
     "link-players-title": {
+      "plugin": "dataBinding",
       "displayName": "Players (Username)",
-      "type": "pagelink",
       "calculator": {
         "id": "FIELDS_PATTERN",
         "config": {
           "pattern": "/players/{username}"
         }
       },
-      "plugin": "dataBinding",
-      "systemField": true,
+      "sortable": false,
+      "queryOperators": [],
       "isDeleted": false,
+      "systemField": true,
+      "type": "pagelink",
       "index": 9
     },
     "username": {
@@ -99,17 +101,19 @@
       "index": 8
     },
     "link-players-all": {
+      "plugin": "dataBinding",
       "displayName": "Players (All)",
-      "type": "pagelink",
       "calculator": {
         "id": "FIELDS_PATTERN",
         "config": {
           "pattern": "/players/"
         }
       },
-      "plugin": "dataBinding",
-      "systemField": true,
+      "sortable": false,
+      "queryOperators": [],
       "isDeleted": false,
+      "systemField": true,
+      "type": "pagelink",
       "index": 10
     },
     "title": {
