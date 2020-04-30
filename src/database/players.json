@@ -27,6 +27,20 @@
       "type": "text",
       "index": 5
     },
+    "link-players-title": {
+      "displayName": "Players (Username)",
+      "type": "pagelink",
+      "calculator": {
+        "id": "FIELDS_PATTERN",
+        "config": {
+          "pattern": "/players/{username}"
+        }
+      },
+      "plugin": "dataBinding",
+      "systemField": true,
+      "isDeleted": false,
+      "index": 9
+    },
     "username": {
       "displayName": "username",
       "sortable": true,
@@ -83,6 +97,20 @@
       "systemField": false,
       "type": "reference",
       "index": 8
+    },
+    "link-players-all": {
+      "displayName": "Players (All)",
+      "type": "pagelink",
+      "calculator": {
+        "id": "FIELDS_PATTERN",
+        "config": {
+          "pattern": "/players/"
+        }
+      },
+      "plugin": "dataBinding",
+      "systemField": true,
+      "isDeleted": false,
+      "index": 10
     },
     "title": {
       "displayName": "Title",

@@ -9,7 +9,58 @@
           "schemaVersion": "1.0"
         },
         "name": "Custom Main Menu",
+        "syncWithPages": false,
         "type": "CustomMenu"
+      },
+      "dataItem-k9lqtbes": {
+        "id": "dataItem-k9lqtbes",
+        "isVisible": true,
+        "isVisibleMobile": true,
+        "label": "players",
+        "link": "#dataItem-k9lqtbfk",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "type": "BasicMenuItem"
+      },
+      "dataItem-k9lqtbfk": {
+        "id": "dataItem-k9lqtbfk",
+        "innerRoute": "/",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "routerId": "routers-k9lqt7va",
+        "target": "_self",
+        "type": "DynamicPageLink"
+      },
+      "dataItem-k9lrlqee": {
+        "id": "dataItem-k9lrlqee",
+        "isVisible": true,
+        "isVisibleMobile": true,
+        "label": "games",
+        "link": "#dataItem-k9lrlqew",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "type": "BasicMenuItem"
+      },
+      "dataItem-k9lrlqew": {
+        "id": "dataItem-k9lrlqew",
+        "innerRoute": "/",
+        "metaData": {
+          "isHidden": false,
+          "isPreset": false,
+          "schemaVersion": "1.0"
+        },
+        "routerId": "routers-k9lrlmhv",
+        "target": "_self",
+        "type": "DynamicPageLink"
       }
     },
     "structure": {
@@ -19,7 +70,13 @@
           "#dataItem-k8e21nph",
           "#bmiye6",
           "#dataItem-k8aluyp1",
-          "#dataItem-k8bww6p8"
+          "#dataItem-k8bww6p8",
+          "#dataItem-k9lqt84a",
+          "#dataItem-k9lqt9ny1",
+          "#dataItem-k9lqtbes",
+          "#dataItem-k9lrlmqm",
+          "#dataItem-k9lrloic1",
+          "#dataItem-k9lrlqee"
         ]
       },
       "bmiye6": {
@@ -36,6 +93,30 @@
       },
       "dataItem-k8e21nph": {
         "id": "dataItem-k8e21nph",
+        "items": []
+      },
+      "dataItem-k9lqt84a": {
+        "id": "dataItem-k9lqt84a",
+        "items": []
+      },
+      "dataItem-k9lqt9ny1": {
+        "id": "dataItem-k9lqt9ny1",
+        "items": []
+      },
+      "dataItem-k9lqtbes": {
+        "id": "dataItem-k9lqtbes",
+        "items": []
+      },
+      "dataItem-k9lrlmqm": {
+        "id": "dataItem-k9lrlmqm",
+        "items": []
+      },
+      "dataItem-k9lrloic1": {
+        "id": "dataItem-k9lrloic1",
+        "items": []
+      },
+      "dataItem-k9lrlqee": {
+        "id": "dataItem-k9lrlqee",
         "items": []
       }
     }

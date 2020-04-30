@@ -1,0 +1,10 @@
+{
+  "content": {
+    "appDefinitionId": "dataBinding",
+    "config": "{\"patterns\":{\"/{title}\":{\"pageRole\":\"048cd523-815c-4632-839d-082147caea3b\",\"title\":\"{title}\",\"config\":{\"collection\":\"results\"},\"seoMetaTags\":{}}}}",
+    "pages": {},
+    "prefix": "results",
+    "routeId": "routers-k9lqrh29"
+  },
+  "documentSchemaVersion": "1.0"
+}

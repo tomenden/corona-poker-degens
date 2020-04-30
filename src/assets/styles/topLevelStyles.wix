@@ -921,6 +921,25 @@
       "styleType": "system",
       "type": "TopLevelStyle"
     },
+    "mc1": {
+      "compId": "",
+      "componentClassName": "wysiwyg.viewer.components.Column",
+      "id": "mc1",
+      "metaData": {
+        "isHidden": false,
+        "isPreset": false,
+        "schemaVersion": "1.0"
+      },
+      "pageId": "",
+      "skin": "wysiwyg.viewer.skins.mediaContainer.DefaultMediaContainer",
+      "style": {
+        "groups": {},
+        "properties": {},
+        "propertiesSource": {}
+      },
+      "styleType": "system",
+      "type": "TopLevelStyle"
+    },
     "mg1": {
       "compId": "",
       "componentClassName": "",
@@ -1419,6 +1438,25 @@
           "shd": "0 1px 3px rgba(0, 0, 0, 0.5);",
           "txt": "color_23"
         }
+      },
+      "styleType": "system",
+      "type": "TopLevelStyle"
+    },
+    "strc1": {
+      "compId": "",
+      "componentClassName": "wysiwyg.viewer.components.StripColumnsContainer",
+      "id": "strc1",
+      "metaData": {
+        "isHidden": false,
+        "isPreset": false,
+        "schemaVersion": "1.0"
+      },
+      "pageId": "",
+      "skin": "wysiwyg.viewer.skins.stripContainer.DefaultStripContainer",
+      "style": {
+        "groups": {},
+        "properties": {},
+        "propertiesSource": {}
       },
       "styleType": "system",
       "type": "TopLevelStyle"
