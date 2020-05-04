@@ -410,6 +410,28 @@
             },
             "type": "ConnectionList"
           },
+          "connection-k9n7by7m": {
+            "id": "connection-k9n7by7m",
+            "items": [
+              {
+                "role": "button1",
+                "type": "WixCodeConnectionItem"
+              },
+              {
+                "config": "{\"events\":{\"onClick\":{\"action\":\"loadMore\"}}}",
+                "controllerId": "dataItem-k9lqztel",
+                "isPrimary": false,
+                "role": "siteButtonRole",
+                "type": "ConnectionItem"
+              }
+            ],
+            "metaData": {
+              "isHidden": false,
+              "isPreset": false,
+              "schemaVersion": "1.0"
+            },
+            "type": "ConnectionList"
+          },
           "ul3sv": {
             "id": "ul3sv",
             "items": [
@@ -531,7 +553,7 @@
               "schemaVersion": "1.0"
             },
             "name": "Results dataset",
-            "settings": "{\"dataset\":{\"collectionName\":\"results\",\"includes\":[\"gameId\"],\"readWriteType\":\"READ\",\"pageSize\":50,\"sort\":null,\"filter\":{\"$and\":[{\"player\":{\"$eq\":{\"filterId\":\"filter-13bcd0b3-3a12-4662-be8d-65a9bf83ab31\",\"@resolver\":\"dataBinding\"}}}]}}}",
+            "settings": "{\"dataset\":{\"collectionName\":\"results\",\"includes\":[\"gameId\"],\"readWriteType\":\"READ\",\"pageSize\":10,\"sort\":null,\"filter\":{\"$and\":[{\"player\":{\"$eq\":{\"filterId\":\"filter-13bcd0b3-3a12-4662-be8d-65a9bf83ab31\",\"@resolver\":\"dataBinding\"}}}]}}}",
             "type": "AppController"
           },
           "dataItem-k9lr642v": {
@@ -594,6 +616,17 @@
               }
             ],
             "type": "Grid"
+          },
+          "dataItem-k9n7by7a": {
+            "id": "dataItem-k9n7by7a",
+            "label": "View More",
+            "metaData": {
+              "isHidden": false,
+              "isPreset": false,
+              "schemaVersion": "1.0"
+            },
+            "svgId": "b861b040274141de9c08999ec3b76edf.svg",
+            "type": "StylableButton"
           },
           "ul3sv": {
             "descriptionSEO": "",
@@ -898,6 +931,28 @@
             },
             "styleType": "custom",
             "type": "ComponentStyle"
+          },
+          "style-k9n7by7c": {
+            "compId": "",
+            "componentClassName": "wixui.StylableButton",
+            "id": "style-k9n7by7c",
+            "metaData": {
+              "isHidden": false,
+              "isPreset": false,
+              "schemaVersion": "1.0"
+            },
+            "pageId": "",
+            "skin": "wixui.skins.Skinless",
+            "style": {
+              "properties": {
+                "$st-css": ":import{-st-from: 'wix-ui-santa/index.st.css';-st-named: StylableButton}.root{-st-extends: StylableButton;transition: all 0.2s ease, visibility 0s;background: #FFFFFF;border: 1px solid #000000}.root:hover{background: #000000}.root:disabled{background: #E2E2E2}.root:disabled::label{color: #8F8F8F}.root:disabled::icon{fill: #8F8F8F}.root::container{transition: inherit}.root::label{transition: inherit;font-size: 14px;font-family: playfairdisplay-bold,\"playfair display\",serif,HelveticaNeueW01-45Ligh, HelveticaNeueW02-45Ligh, HelveticaNeueW10-45Ligh, Helvetica Neue, Helvetica, Arial, メイリオ, meiryo, ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;color: #000000}.root::icon{transition: inherit;width: 14px;height: 14px;fill: #000000;display: none}.root:hover::label{color: #FFFFFF}"
+              },
+              "propertiesSource": {
+                "$st-css": "value"
+              }
+            },
+            "styleType": "custom",
+            "type": "ComponentStyle"
           }
         }
       },
@@ -931,7 +986,8 @@
       },
       "pageUriSEO": "players-title",
       "pagesPlatformApplications": [
-        "wixCode"
+        "wixCode",
+        "dataBinding"
       ],
       "structure": {
         "componentType": "mobile.core.components.Page",
@@ -1010,7 +1066,7 @@
                     "id": "comp-k9lremqu",
                     "layout": {
                       "fixedPosition": false,
-                      "height": 60,
+                      "height": 59,
                       "rotationInDegrees": 0,
                       "scale": 1,
                       "width": 436,
@@ -1058,6 +1114,24 @@
                     "skin": "wysiwyg.viewer.skins.GridSkin",
                     "styleId": "style-k9lr7mva",
                     "type": "Component"
+                  },
+                  {
+                    "componentType": "wixui.StylableButton",
+                    "connectionQuery": "connection-k9n7by7m",
+                    "dataQuery": "#dataItem-k9n7by7a",
+                    "id": "comp-k9n7by65",
+                    "layout": {
+                      "fixedPosition": false,
+                      "height": 40,
+                      "rotationInDegrees": 0,
+                      "scale": 1,
+                      "width": 142,
+                      "x": 409,
+                      "y": 611
+                    },
+                    "skin": "wixui.skins.Skinless",
+                    "styleId": "style-k9n7by7c",
+                    "type": "Component"
                   }
                 ],
                 "connectionQuery": "connection-k9lqt84y1",
@@ -1069,7 +1143,7 @@
                   "rotationInDegrees": 0,
                   "scale": 1,
                   "width": 980,
-                  "x": 0,
+                  "x": -1,
                   "y": 0
                 },
                 "mobileHintsQuery": "mobileHints-k9lqt84y",
@@ -1086,7 +1160,7 @@
               "height": 1164,
               "rotationInDegrees": 0,
               "scale": 1,
-              "width": 1280,
+              "width": 1369,
               "x": 0,
               "y": 6
             },
@@ -1102,10 +1176,10 @@
             "id": "comp-k9lqt85l",
             "layout": {
               "fixedPosition": false,
-              "height": 78,
+              "height": 96,
               "rotationInDegrees": 0,
               "scale": 1,
-              "width": 74,
+              "width": 60,
               "x": 334,
               "y": 22
             },
@@ -1120,10 +1194,10 @@
             "id": "comp-k9lqztdn",
             "layout": {
               "fixedPosition": false,
-              "height": 78,
+              "height": 96,
               "rotationInDegrees": 0,
               "scale": 1,
-              "width": 93,
+              "width": 60,
               "x": 505,
               "y": 13
             },
@@ -1263,6 +1337,24 @@
                     "propertyQuery": "mobile_propItem-k9lr7mv9",
                     "skin": "wysiwyg.viewer.skins.GridSkin",
                     "styleId": "style-k9lr7mva",
+                    "type": "Component"
+                  },
+                  {
+                    "componentType": "wixui.StylableButton",
+                    "connectionQuery": "connection-k9n7by7m",
+                    "dataQuery": "#dataItem-k9n7by7a",
+                    "id": "comp-k9n7by65",
+                    "layout": {
+                      "fixedPosition": false,
+                      "height": 85,
+                      "rotationInDegrees": 0,
+                      "scale": 1,
+                      "width": 300,
+                      "x": 10,
+                      "y": 680
+                    },
+                    "skin": "wixui.skins.Skinless",
+                    "styleId": "style-k9n7by7c",
                     "type": "Component"
                   }
                 ],

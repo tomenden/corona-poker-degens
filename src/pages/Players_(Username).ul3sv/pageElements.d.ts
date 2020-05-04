@@ -8,6 +8,7 @@ type PageElementsMap = {
   "#group1": $w.Box;
   "#text17": $w.Text;
   "#table1": $w.Table;
+  "#button1": $w.Button;
   "#name": $w.Text;
   "#text16": $w.Text;
   "#header1": $w.Header;
