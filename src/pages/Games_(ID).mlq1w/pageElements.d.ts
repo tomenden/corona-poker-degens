@@ -7,6 +7,7 @@ type PageElementsMap = {
   "#title": $w.Text;
   "#updatedBy": $w.Text;
   "#text16": $w.Text;
+  "#cancel": $w.Button;
   "#table1": $w.Table;
   "#gameScreenshot": $w.Image;
   "#header1": $w.Header;

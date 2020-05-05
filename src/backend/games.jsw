@@ -1,0 +1,22 @@
+import wixData from "wix-data";
+import wixUsers from "wix-users-backend";
+import {keyBy} from "lodash";
+
+const ALLOWED = keyBy(['Admin', 'Game Manager'])
+const canCancel = async () => {
+    const roles = await wixUsers.currentUser.getRoles()
+    return !!roles.find(({name}) => ALLOWED[name])
+}
+
+export async function cancel(gameId) {
+    try {
+        // const permitted = await canCancel()
+        // if (!permitted) {
+        //     throw new Error('You are not authorized to cancel a game')
+        // }
+        await wixData.remove("games", gameId)
+        return {success: true}
+    } catch (e) {
+        return e
+    }
+}

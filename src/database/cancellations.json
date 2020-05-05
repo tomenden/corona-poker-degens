@@ -1,0 +1,106 @@
+{
+  "displayName": "cancellations",
+  "permissions": {
+    "insert": "siteMember",
+    "update": "siteMemberAuthor",
+    "remove": "siteMemberAuthor",
+    "read": "anyone"
+  },
+  "allowedOperations": [
+    "count",
+    "get",
+    "find",
+    "remove",
+    "insert",
+    "update"
+  ],
+  "id": "cancellations",
+  "isDeleted": false,
+  "ownerAppId": null,
+  "displayNamespace": null,
+  "fields": {
+    "numPlayers": {
+      "displayName": "numPlayers",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "number",
+      "index": 6
+    },
+    "_id": {
+      "displayName": "ID",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 1
+    },
+    "_owner": {
+      "displayName": "Owner",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "text",
+      "index": 2
+    },
+    "_createdDate": {
+      "displayName": "Created Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 3
+    },
+    "_updatedDate": {
+      "displayName": "Updated Date",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": true,
+      "type": "datetime",
+      "index": 4
+    },
+    "results": {
+      "displayName": "results",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 5
+    },
+    "gameCreatedBy": {
+      "displayName": "gameCreatedBy",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 8
+    },
+    "title": {
+      "displayName": "Title",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 0
+    },
+    "gameScreenshot": {
+      "displayName": "gameScreenshot",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "image",
+      "index": 7
+    },
+    "gameCancelledBy": {
+      "displayName": "gameCancelledBy",
+      "sortable": true,
+      "isDeleted": false,
+      "systemField": false,
+      "type": "text",
+      "index": 9
+    }
+  },
+  "displayField": "title",
+  "storage": "docstore",
+  "namespace": null
+}
